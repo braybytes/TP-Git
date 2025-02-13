@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Page 1</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(45deg, #2c3e50, #3498db);
+            font-family: 'Arial', sans-serif;
+        }
+
+        .main-title {
+            font-size: 8rem;
+            color: white;
+            text-transform: uppercase;
+            letter-spacing: 15px;
+            text-shadow: 
+                0 5px 10px rgba(0,0,0,0.2),
+                0 15px 20px rgba(0,0,0,0.15);
+            animation: titleAppear 1.5s ease-out forwards;
+            opacity: 0;
+            transform: translateY(30px);
+        }
+
+        @keyframes titleAppear {
+            0% {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .container {
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .subtitle {
+            color: rgba(255,255,255,0.8);
+            font-size: 1.5rem;
+            margin-top: 1rem;
+            animation: subtitleAppear 1.5s ease-out 0.5s forwards;
+            opacity: 0;
+        }
+
+        @keyframes subtitleAppear {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .decoration {
+            width: 100px;
+            height: 4px;
+            background: white;
+            margin: 2rem auto;
+            border-radius: 2px;
+            animation: lineExpand 1s ease-out 1s forwards;
+            transform: scaleX(0);
+        }
+
+        @keyframes lineExpand {
+            from {
+                transform: scaleX(0);
+            }
+            to {
+                transform: scaleX(1);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="main-title">Page 1</h1>
+        <div class="decoration"></div>
+        <p class="subtitle">Bienvenue sur la première page</p>
+    </div>
+</body>
+</html>
